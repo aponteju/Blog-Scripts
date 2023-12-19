@@ -4,7 +4,7 @@
     .DESCRIPTION
         This script will run a speed test using the OOKLA Speedtest CLI and report back to NinjaOne.
     .NOTES
-        2022-12-31: Initial version
+        2022-12-31: Initial version v2
     .LINK
         Blog post: https://homotechsual.dev/2022/12/22/NinjaOne-custom-fields-endless-possibilities/
 #>
