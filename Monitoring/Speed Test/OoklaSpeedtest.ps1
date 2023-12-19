@@ -15,7 +15,7 @@ param (
     [String]$OoklaSpeedtestURI = 'https://install.speedtest.net/app/cli/ookla-speedtest-1.2.0-win64.zip',
     # Path to download the Ookla Speedtest CLI executable to.
     [Parameter()]
-    [String]$OoklaSpeedtestEXEPath = 'C:\RMM\Bin\',
+    [String]$OoklaSpeedtestEXEPath = 'C:\temp\',
     # Do not redownload the Ookla Speedtest CLI executable.
     [Parameter()]
     [String]$NoUpdate,
@@ -94,6 +94,6 @@ $SpeedTestResult = ConvertFrom-Json $SpeedTestResultJSON
 $ServerUsed = '{0} ({1} - {2})' -f $SpeedTestResult.server.name, $SpeedTestResult.server.location, $SpeedTestResult.server.country
 [double]$DownloadSpeed = [math]::round($SpeedTestResult.download.bandwidth / 125000, 2)
 [double]$UploadSpeed = [math]::round($SpeedTestResult.upload.bandwidth / 125000, 2)
-Ninja-Property-Set serverUsed $ServerUsed
-Ninja-Property-Set downloadSpeed $DownloadSpeed
-Ninja-Property-Set uploadSpeed $UploadSpeed
+Write-Output "Server Used: $ServerUsed"
+Write-Output "Download Speed: $DownloadSpeed"
+Write-Output "Upload Speed: $UploadSpeed"
