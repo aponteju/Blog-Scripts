@@ -28,7 +28,7 @@ param (
 )
 
 $OoklaSpeedtestZipName = Split-Path -Path $OoklaSpeedtestURI -Leaf
-$OoklaSpeedtestZipPath = Join-Path -Path 'C:\RMM\' -ChildPath $OoklaSpeedtestZipName
+$OoklaSpeedtestZipPath = Join-Path -Path 'C:\temp\' -ChildPath $OoklaSpeedtestZipName
 $OoklaSpeedtestEXEFile = Join-Path -Path $OoklaSpeedtestEXEPath -ChildPath 'speedtest.exe'
 $OoklaSpeedtestVersionFile = Join-Path -Path $OoklaSpeedtestEXEPath -ChildPath 'ooklaspeedtest-cli.version'
 
